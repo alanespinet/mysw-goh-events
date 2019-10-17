@@ -1,0 +1,261 @@
+query {
+  characters {
+    id
+    name
+    gearLevel
+    relicLevel
+    currentRarityShards
+    unlocked
+  }
+}
+
+query {
+  ships {
+    id
+    name
+    currentRarityShards
+    unlocked
+  }
+}
+
+query {
+  tags {
+    id
+    name
+  }
+}
+
+query {
+  rarities {
+    id
+    level
+    requiredShards
+  }
+}
+
+query {
+  characters {
+    id
+    name
+    tags {
+      id
+      name
+    }
+    rarity {
+      id
+      level
+      requiredShards
+    }
+    gearLevel
+    relicLevel
+    alignment {
+      id
+      name
+    }
+    currentRarityShards
+    unlocked
+  }
+}
+
+query {
+  ships {
+    id
+    name
+    tags {
+      id
+      name
+    }
+    level
+    rarity {
+      id
+      level
+      requiredShards
+    }
+    crew {
+      id
+      name
+      rarity {
+        level
+      }
+    }
+    alignment {
+      id
+      name
+    }
+    currentRarityShards
+    unlocked
+  }
+}
+
+
+mutation {
+  addCharacter( name: "Bastila Shan", 
+                tags: ["5da88bcd87b31c560dc0ce76", "5da8a2fda3e88159a192dba7"], 
+                rarity: "5da89ec3fb552258f68dabc4", 
+                gearLevel: 11, 
+                relicLevel: 0, 
+                alignment: "5da88bcd87b31c560dc0ce76", 
+                currentRarityShards: 100, 
+                unlocked: true
+){
+    id
+    name
+    gearLevel
+    currentRarityShards
+    unlocked
+  }
+}
+
+
+"tags": {
+  "data": {
+    "tags": [
+      {
+        "id": "5da88bcd87b31c560dc0ce76",
+        "name": "Light Side"
+      },
+      {
+        "id": "5da88bed87b31c560dc0ce77",
+        "name": "Dark Side"
+      },
+      {
+        "id": "5da8a2fda3e88159a192dba7",
+        "name": "Jedi"
+      }
+    ]
+  }
+}
+
+
+
+"rarities": {
+  "data": {
+    "rarities": [
+      {
+        "id": "5da89e8cfb552258f68dabbe",
+        "level": 1,
+        "requiredShards": 10
+      },
+      {
+        "id": "5da89e92fb552258f68dabbf",
+        "level": 2,
+        "requiredShards": 15
+      },
+      {
+        "id": "5da89e9dfb552258f68dabc0",
+        "level": 3,
+        "requiredShards": 25
+      },
+      {
+        "id": "5da89ea7fb552258f68dabc1",
+        "level": 4,
+        "requiredShards": 30
+      },
+      {
+        "id": "5da89eb1fb552258f68dabc2",
+        "level": 5,
+        "requiredShards": 65
+      },
+      {
+        "id": "5da89ebdfb552258f68dabc3",
+        "level": 6,
+        "requiredShards": 85
+      },
+      {
+        "id": "5da89ec3fb552258f68dabc4",
+        "level": 7,
+        "requiredShards": 100
+      }
+    ]
+  }
+}
+
+
+Vader: "5da8c372f89b955dbcf8b213"
+
+Dark Side: "5da88bed87b31c560dc0ce77"
+
+Rarity:
+    7s: "5da89ec3fb552258f68dabc4"
+
+
+requirementCharacters {
+  "data": {
+    "requirementCharacters": [
+      {
+        "id": "5da8d9deddb49961a89e616b",
+        "name": "Bastila Shan"
+      },
+      {
+        "id": "5da8da05bc2ce461b3d3de7b",
+        "name": "Jolee Bindo"
+      }
+    ]
+  }
+}
+
+requirementShips {
+  "data": {
+    "requirementShips": [
+      {
+        "id": "5da8dbbf2b1e50623d59c287",
+        "name": "TIE Advanced x1"
+      }
+    ]
+  }
+}
+
+
+query {
+  requirements {
+    id
+    requirementType
+    requirementCharacter {
+      id
+      name
+      level
+      rarityLevel
+      gear
+    }
+    requirementShip {
+      id
+      name
+      level
+      rarityLevel
+    }
+  }
+}
+
+
+
+# for adding an event #
+
+{
+  "data": {
+    "requirements": [
+      {
+        "id": "5da8e050731b926351d12d89",
+        "requirementCharacter": {
+          "id": "5da8d9deddb49961a89e616b",
+          "name": "Bastila Shan"
+        }
+      },
+      {
+        "id": "5da8e3ce7133486419414877",
+        "requirementCharacter": null
+      },
+      {
+        "id": "5da8ecc71a06a265e2e6b96e",
+        "requirementCharacter": {
+          "id": "5da8da05bc2ce461b3d3de7b",
+          "name": "Jolee Bindo"
+        }
+      }
+    ]
+  }
+}
+
+Revan: "5da8eaa31a06a265e2e6b96d"
+
+
+
