@@ -1,0 +1,22 @@
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    @include responsive-xxl-desktop {
+        max-width: 1600px;
+    }
+
+    @include responsive-small-desktop {
+        max-width: 960px;
+    }
+
+    @include responsive-tablet {
+        max-width: 720px;
+    }
+
+    @include responsive-phone {
+        max-width: none;
+    }
+}

@@ -1,0 +1,29 @@
+/* colors */ 
+$baseColor: #f2f2f2;
+
+/* typography */
+$textFont: 'Roboto', sans-serif;
+$headlineFont: 'PT Sans', sans-serif;
+
+/* responsive breakpoints */
+// extra extra large devices
+$screen-xxl-min: 1680px;
+
+// extra large devices
+$screen-xl-max: 1679px;
+$screen-xl-min: 1200px;
+
+// large devices
+$screen-lg-max: 1199px;
+$screen-lg-min: 992px;
+
+// medium devices
+$screen-md-max: 991px;
+$screen-md-min: 768px;
+
+// small devices
+$screen-sm-max: 767px;
+$screen-sm-max: 360px;
+
+// extra small devices
+$phoneSize: 359px;

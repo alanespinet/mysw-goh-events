@@ -1,0 +1,23 @@
+@mixin responsive-xxl-desktop {
+	@media (min-width: $screen-xxl-min){
+		@content;
+	}
+}
+
+@mixin responsive-small-desktop {
+	@media (max-width: $screen-lg-max){
+		@content;
+	}
+}
+
+@mixin responsive-tablet {
+	@media (max-width: $screen-md-max){
+		@content;
+	}
+}
+
+@mixin responsive-phone {
+	@media (max-width: $screen-sm-max){
+		@content;
+	}
+}
