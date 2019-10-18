@@ -9,6 +9,7 @@ const RequirementCharacter = require('../mongoose/models/requirementCharacter');
 const RequirementShip = require('../mongoose/models/requirementShip');
 const Requirement = require('../mongoose/models/requirement');
 const Event = require('../mongoose/models/event');
+const User = require('../mongoose/models/user');
 
 const helpers = {
     getRarity: async (parent, args, context, info) => {
@@ -65,6 +66,23 @@ const resolvers = {
 
         events: async () => {
             return await Event.find({});
+        },
+
+        users: async () => {
+            return await User.find({});
+        },
+
+        signin: async (parent, args, context, info) => {
+            const { username, password } = args;
+            let responseData = 'error';
+
+            const user = await User.findOne({ 
+                username: username,
+                password: password 
+            });
+
+            if( user != null ){  responseData = user.accessToken; }
+            return responseData;
         }
     },
 
@@ -126,6 +144,19 @@ const resolvers = {
             const event = new Event({ name, rewardCharacter, rewardShip, unlocksAt, requirements, relatedEvents });
 
             return await event.save();
+        },
+
+        addUser: async (parent, args, context, info) => {
+            const { username, password } = args;
+            const accessToken = '1fdg2h4g7m8g9hffh8f7d6s5g3hfgjk4jh5k7ghj8f9hds87s65nd4ghjf';
+
+            const user = new User({
+                username,
+                password,
+                accessToken
+            });
+
+            return await user.save();
         }
     },
 

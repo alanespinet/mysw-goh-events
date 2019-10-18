@@ -67,6 +67,13 @@ const typeDefs = `
         rarityLevel: Int!
     }
 
+    type User {
+        id: String!
+        username: String!
+        password: String!
+        accessToken: String!
+    }
+
     type Query {
         test: String!
         tags: [Tag]!
@@ -78,6 +85,8 @@ const typeDefs = `
         requirementShips: [RequirementShip]!
         requirements: [Requirement]!
         events: [Event]!
+        users: [User]!
+        signin(username: String!, password: String!): String!
     }
 
     type Mutation {
@@ -122,6 +131,8 @@ const typeDefs = `
                 requirements: [String]!,
                 relatedEvents: [String]
         ): Event
+
+        addUser(username: String!, password: String!): User
     }
 `;
 
