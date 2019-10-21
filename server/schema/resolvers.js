@@ -70,19 +70,6 @@ const resolvers = {
 
         users: async () => {
             return await User.find({});
-        },
-
-        signin: async (parent, args, context, info) => {
-            const { username, password } = args;
-            let responseData = 'error';
-
-            const user = await User.findOne({ 
-                username: username,
-                password: password 
-            });
-
-            if( user != null ){  responseData = user.accessToken; }
-            return responseData;
         }
     },
 
@@ -157,6 +144,19 @@ const resolvers = {
             });
 
             return await user.save();
+        },
+
+        doSignin: async (parent, args, context, info) => {
+            const { username, password } = args;
+            let responseData = 'error';
+
+            const user = await User.findOne({ 
+                username: username,
+                password: password 
+            });
+
+            if( user != null ){  responseData = user.accessToken; }
+            return responseData;
         }
     },
 

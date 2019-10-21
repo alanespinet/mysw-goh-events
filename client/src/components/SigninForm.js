@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { graphql } from 'react-apollo';
+import gql from 'graphql-tag';
 
 const defaultState = {
     username: '',
@@ -24,7 +26,13 @@ class SigninForm extends Component {
             alert('Username and Password both MUST have values');
             return false;
         } else {
-            this.props.history.push('/events');
+            this.props.mutate({
+                variables: {
+                    username: this.state.username,
+                    password: this.state.password
+                }
+            }).then( res => console.log( res ) );
+            // this.props.history.push('/events');
         }
     }
 
@@ -62,4 +70,10 @@ class SigninForm extends Component {
     }
 }
 
-export default SigninForm;
+const mutation = gql`
+    mutation doSignin($username: String!, $password: String!) {
+        doSignin(username: $username, password: $password)
+    }
+`;
+
+export default graphql(mutation)(SigninForm);

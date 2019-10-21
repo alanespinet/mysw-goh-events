@@ -86,7 +86,6 @@ const typeDefs = `
         requirements: [Requirement]!
         events: [Event]!
         users: [User]!
-        signin(username: String!, password: String!): String!
     }
 
     type Mutation {
@@ -133,6 +132,8 @@ const typeDefs = `
         ): Event
 
         addUser(username: String!, password: String!): User
+
+        doSignin(username: String!, password: String!): String!
     }
 `;
 
