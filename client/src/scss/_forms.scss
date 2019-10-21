@@ -1,0 +1,44 @@
+form {
+    .form-row {
+        margin-bottom: 20px;
+    }
+
+    label,
+    input,
+    button {
+        width: 100%;
+        display: block;
+
+        font-family: $textFont;
+        font-weight: 300;
+    }
+
+    label {
+        margin-bottom: 5px;
+    }
+
+    input,
+    button {
+        height: 40px;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    input {
+        padding: 0 10px;
+        border: 1px solid $lightGray;
+    }
+
+    button {
+        margin-top: 40px;
+        background-color: $primaryColor;
+        transition: all .3s ease;
+        border: 2px solid $primaryColor;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #fff;
+            color: $primaryColor;
+        }
+    }
+}

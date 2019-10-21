@@ -1,0 +1,33 @@
+.welcome {
+    height: 100%;
+    @include flex-cc;
+
+    p {
+        font-family: $headlineFont;
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    a {
+        display: flex;
+        width: 250px;
+        margin: 0 auto;
+        text-decoration: none !important;
+        font-family: $textFont;
+        height: 40px;
+        border-radius: 5px;
+        background-color: $primaryColor;
+        border: 2px solid $primaryColor;
+        font-weight: 300;
+        justify-content: center;
+        align-items: center;
+        color: black;
+        transition: all .3s ease;
+    
+        &:hover {
+            background-color: #fff;
+            color: $primaryColor;
+        }
+    }
+}

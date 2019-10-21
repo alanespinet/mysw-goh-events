@@ -21,3 +21,9 @@
 		@content;
 	}
 }
+
+@mixin flex-cc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

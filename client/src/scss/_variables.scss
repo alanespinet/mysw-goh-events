@@ -1,5 +1,8 @@
 /* colors */ 
 $baseColor: #f2f2f2;
+$darkGray: #2f2f2f;
+$primaryColor: tomato;
+$lightGray: #e2e2e2;
 
 /* typography */
 $textFont: 'Roboto', sans-serif;
@@ -23,7 +26,7 @@ $screen-md-min: 768px;
 
 // small devices
 $screen-sm-max: 767px;
-$screen-sm-max: 360px;
+$screen-sm-min: 360px;
 
 // extra small devices
 $phoneSize: 359px;

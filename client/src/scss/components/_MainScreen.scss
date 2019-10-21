@@ -1,0 +1,30 @@
+.main-screen {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    &__column {
+        flex-basis: 50%;
+    }
+
+    &__image {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        height: 100%;
+
+        // @media (max-width: 767px){
+        //     display: none;
+        // }
+
+        @include responsive-phone {
+            display: none;
+        }
+    }
+
+    &__signin {
+        @include responsive-phone {
+            flex-basis: 100%;
+        }
+    }
+}

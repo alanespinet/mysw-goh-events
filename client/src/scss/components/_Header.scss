@@ -1,0 +1,11 @@
+.header {
+    height: 200px;
+    background-color: $darkGray;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__logo {
+        width: 200px;
+    }
+}

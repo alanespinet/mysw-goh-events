@@ -1,0 +1,19 @@
+.signin-form-wrapper {
+    height: 100%;
+    @include flex-cc;
+
+    #signin-form {
+        width: 100%;
+        max-width: 300px;
+
+        p {
+            font-family: $textFont;
+            font-size: 12px;
+            font-weight: 300;
+
+            &.signin-form__text {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}

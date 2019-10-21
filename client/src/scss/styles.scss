@@ -5,6 +5,14 @@
 /* style files */
 @import './base';
 @import './layout';
+@import './forms';
 
 /* style components files */
 @import './components/app';
+@import './components/Header';
+@import './components/Footer';
+@import './components/Main';
+
+@import './components/MainScreen';
+@import './components/SigninForm';
+@import './components/Welcome';
