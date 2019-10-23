@@ -1,0 +1,65 @@
+.addTag {
+    &__add-button {
+        button {
+            height: 40px;
+            background-color: tomato;
+            max-width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid tomato;
+            margin-bottom: 20px;
+            width: 100%;
+            border-radius: 5px;
+            font-family: $textFont;
+            font-size: 14px;
+            font-weight: 300;
+            transition: all .3s ease;
+
+            svg {
+                margin-left: 20px;
+            }
+
+            &:hover {
+                background-color: #fff;
+                color: tomato;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__form {
+        opacity: 0;
+        height: 0;
+        overflow-y: hidden;
+        margin-bottom: 30px;
+        transition: all .3s ease;
+
+        &.visible {
+            height: 114px;
+            opacity: 1;
+        }
+
+        &__buttons-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            button {
+                margin-top: 10px;
+                margin-right: 10px;
+                flex-basis: 200px;
+
+                &.addTag-confirmAddButton {
+                    background-color: teal;
+                    border-color: teal;
+
+                    &:hover {
+                        color: teal;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

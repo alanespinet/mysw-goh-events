@@ -1,11 +1,63 @@
 .header {
-    height: 200px;
+    height: 140px;
     background-color: $darkGray;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
 
     &__logo {
         width: 200px;
+    }
+
+    &__content {
+        @include flex-sb;
+    }
+
+    &__toggler {
+        width: 48px;
+        height: 48px;
+        border: 1px solid $darkGray;
+        border-radius: 5px;
+        background-color: $darkGray;
+        transition: all .3s ease;
+        display: none;
+        margin-left: auto;
+
+        &:hover {
+            border-color: #fff;
+            cursor: pointer;
+        }
+    }
+
+    @include responsive-phone {
+        &__menu {
+            position: absolute;
+            z-index: 100;
+            right: 0;
+            top: 140px;
+            background-color: $darkGray;
+            width: 100%;
+            padding: 0;
+            height: 0;
+            overflow-y: hidden;
+            transition: all .3s ease;
+
+            &.open {
+                height: 254px;
+            }
+        }
+
+        &__content {
+            justify-content: center;
+        }
+
+        &__logo {
+            width: 150px;
+        }
+
+        &__toggler {
+            display: block;
+        }
     }
 }

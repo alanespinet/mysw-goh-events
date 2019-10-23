@@ -157,6 +157,16 @@ const resolvers = {
 
             if( user != null ){  responseData = user.accessToken; }
             return responseData;
+        },
+
+        deleteTag: async (parent, args, context, info) => {
+            const { id } = args;
+            return await Tag.findByIdAndRemove({ _id: mongoose.Types.ObjectId(id) });
+        },
+
+        editTag: async (parent, args, context, info) => {
+            const { id, name } = args;
+            return await Tag.findByIdAndUpdate({ _id: mongoose.Types.ObjectId(id) }, { name });
         }
     },
 

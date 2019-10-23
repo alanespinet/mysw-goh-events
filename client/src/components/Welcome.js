@@ -5,7 +5,7 @@ const Welcome = () => (
     <div className="welcome">
         <div className="welcome__content">
             <p>Welcome back. You can access to your planning Screen, if you like</p>
-            <Link to="/events">Events</Link>
+            <Link to="/events">Plan Events</Link>
         </div>
     </div>
 );

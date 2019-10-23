@@ -134,6 +134,10 @@ const typeDefs = `
         addUser(username: String!, password: String!): User
 
         doSignin(username: String!, password: String!): String!
+
+        deleteTag(id: String!): Tag
+
+        editTag(id: String, name: String!): Tag
     }
 `;
 

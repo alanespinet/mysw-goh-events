@@ -7,6 +7,10 @@
         font-size: 36px;
         text-align: center;
         margin-bottom: 30px;
+
+        @include responsive-phone {
+            font-size: 24px;
+        }
     }
 
     a {

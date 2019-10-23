@@ -31,7 +31,15 @@ class SigninForm extends Component {
                     username: this.state.username,
                     password: this.state.password
                 }
-            }).then( res => console.log( res ) );
+            }).then(res => {
+                const { data } = res;
+                if( data && data.doSignin && data.doSignin !== "error"){
+                    localStorage.setItem('swep_atoken', data.doSignin);
+                    window.location.reload();
+                } else {
+                    alert('Your login info seems to be incorrect.');
+                }
+            });
             // this.props.history.push('/events');
         }
     }

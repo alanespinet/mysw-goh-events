@@ -1,0 +1,54 @@
+.menu {
+    font-family: $textFont;
+
+    a {
+        color: #fff;
+        font-weight: 300;
+        text-decoration: none !important;
+        margin-left: 20px;
+        transition: all .3s ease;
+        padding: 10px;
+
+        &:hover {
+            color: $lightBlue;
+        }
+
+        @include responsive-tablet {
+            margin-left: 0;
+        }
+
+        &.active {
+            background-color: #fff;
+            color: $darkGray;
+            border-radius: 5px;
+        }
+    }
+
+    .logout-link {
+        color: tomato;
+
+        &:hover {
+            color: #fff;
+            background-color: tomato;
+            border-radius: 5px;
+        }
+    }
+
+    @include responsive-phone {
+        a {
+            display: block;
+            width: 100%;
+            text-align: center;
+
+            &.active {
+                background-color: $darkGray;
+                color: #fff;
+                border-radius: 0;
+            }
+        }
+
+        .logout-link {
+            border-radius: 0 !important; 
+        }
+    }
+}

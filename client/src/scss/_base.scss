@@ -9,6 +9,10 @@ body {
     margin: 0;
 }
 
+*:focus {
+    outline: none !important;
+}
+
 h1, 
 h2, 
 h3, 
@@ -20,6 +24,12 @@ h6 {
 
 h1 {
     font-size: 48px;
+}
+
+h2 {
+    font-size: 40px;
+    color: darken( $lightBlue, 70% );
+    margin-bottom: 30px;
 }
 
 .img-fluid {

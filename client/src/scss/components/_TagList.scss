@@ -1,0 +1,102 @@
+.tagList {
+    padding: 60px 0;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .tag {
+        margin: 0 0 10px;
+        flex-basis: 49.5%;
+        position: relative;
+
+        font-family: $textFont;
+        font-weight: 300;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        p {
+            padding: 10px 15px;
+        }
+
+        &__info {
+            background-color: $lightBlue;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-basis: 100%;
+            height: 40px;
+        }
+
+        &__action {
+            border: none;
+            border-radius: 0;
+            height: 100%;
+            flex-basis: 40px;
+            padding: 0;
+            background-color: lighten(gold, 40% );
+            font-size: 16px;
+            color: $darkGray;
+
+            &.delete-button {
+                margin-left: auto;
+                background-color: lighten(tomato, 25%);
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__edit {
+            flex-basis: 100%;
+            height: 40px;
+            display: none;
+
+            input, button {
+                height: 100%;
+                font-family: $textFont;
+                font-weight: 300;
+                font-size: 14px;
+            }
+
+            button {
+                flex-basis: 40px;
+                background-color: lighten( teal, 70% );
+                border: 1px solid rgba( black, .1);
+                font-weight: 400;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            input {
+                flex-basis: calc(100% - 40px);
+                border: none;
+                border-left: 1px solid rgba( black, .1);
+                border-bottom: 1px solid rgba( black, .1);
+                border-top: 1px solid rgba( black, .1);
+                padding: 0 10px;
+            }
+
+            &.visible {
+                display: flex;
+            }
+        }
+
+        @include responsive-tablet {
+            flex-basis: 49.3%;
+        }
+
+        @include responsive-phone {
+            flex-basis: 100%;
+        }
+    }
+}
