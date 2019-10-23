@@ -38,12 +38,17 @@
         &.visible {
             height: 114px;
             opacity: 1;
+
+            @media (max-width: 489px){
+                height: 170px;
+            }
         }
 
         &__buttons-wrapper {
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            flex-wrap: wrap;
 
             button {
                 margin-top: 10px;
@@ -58,6 +63,11 @@
                         color: teal;
                         background-color: #fff;
                     }
+                }
+
+                @media (max-width: 489px){
+                    flex-basis: 100%;
+                    margin-right: 0;
                 }
             }
         }
