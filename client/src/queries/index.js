@@ -8,3 +8,13 @@ export const getTagsQuery = gql`
         }
     }
 `;
+
+export const getRaritiesQuery = gql`
+    query {
+        rarities {
+            id
+            level
+            requiredShards
+        }
+    }
+`;

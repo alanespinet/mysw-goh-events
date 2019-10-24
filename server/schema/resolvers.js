@@ -41,7 +41,7 @@ const resolvers = {
         },
 
         rarities: async () => {
-            return await Rarity.find({});
+            return await Rarity.find({}).sort({level: 1});
         },
 
         characters: async () => {
@@ -167,6 +167,16 @@ const resolvers = {
         editTag: async (parent, args, context, info) => {
             const { id, name } = args;
             return await Tag.findByIdAndUpdate({ _id: mongoose.Types.ObjectId(id) }, { name });
+        },
+
+        deleteRarity: async (parent, args, context, info) => {
+            const { id } = args;
+            return await Rarity.findByIdAndRemove({ _id: mongoose.Types.ObjectId(id) });
+        },
+
+        editRarity: async (parent, args, context, info) => {
+            const { id, level, requiredShards } = args;
+            return await Rarity.findByIdAndUpdate({ _id: mongoose.Types.ObjectId(id) }, { level, requiredShards });
         }
     },
 

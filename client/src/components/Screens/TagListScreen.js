@@ -9,7 +9,7 @@ class TagListScreen extends Component {
     render(){
         return (
             <div className="tagList">
-                <h2>Tags</h2>
+                <h1>Tags</h1>
                 <AddTag />
 
                 <div className="tagList__list">

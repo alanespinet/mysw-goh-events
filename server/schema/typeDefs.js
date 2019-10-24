@@ -138,6 +138,10 @@ const typeDefs = `
         deleteTag(id: String!): Tag
 
         editTag(id: String, name: String!): Tag
+
+        deleteRarity(id: String!): Rarity
+
+        editRarity(id: String, level: Int!, requiredShards: Int!): Rarity
     }
 `;
 

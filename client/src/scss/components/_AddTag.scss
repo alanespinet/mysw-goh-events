@@ -36,11 +36,11 @@
         transition: all .3s ease;
 
         &.visible {
-            height: 114px;
+            height: 134px;
             opacity: 1;
 
             @media (max-width: 489px){
-                height: 170px;
+                height: 190px;
             }
         }
 
@@ -69,6 +69,23 @@
                     flex-basis: 100%;
                     margin-right: 0;
                 }
+            }
+        }
+    }
+
+    input {
+        margin-bottom: 10px;
+    }
+}
+
+.addTag.addRarity {
+    .addTag__form {
+        &.visible {
+            height: 204px;
+            opacity: 1;
+
+            @media (max-width: 489px){
+                height: 260px;
             }
         }
     }

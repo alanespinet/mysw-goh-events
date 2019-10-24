@@ -5,6 +5,7 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import Home from './components/Home';
 import Tags from './components/Tags';
+import Rarities from './components/Rarities';
 import P404 from './components/P404';
 
 import './scss/styles.scss';
@@ -21,6 +22,7 @@ const App = () => {
           <Switch>
             <Route path="/" exact={ true } component={ Home } />
             <Route path="/tags" component={ Tags } />
+            <Route path="/rarities" component={ Rarities } />
             <Route component={ P404 } />
           </Switch>
         </BrowserRouter>
